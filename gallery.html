@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gallery.css">
+     <!------Aos Animation------>
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!-------Owl link-------->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--------google font-------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rancho&display=swap" rel="stylesheet">
+    
+     <!-------bootstrap link-------->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!------owl link------->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-----magnific popup------>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Dancing+Script:wght@600&family=Libre+Baskerville&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+      <!--------navbar---------->
+      <nav class="navbar navbar-expand-lg  sticky-top" style="background-color: white !important;">
+        <a class="navbar-brand me-auto" href="#"><img src="./images/Home-1/logo.png" alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./facilities.html">Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btnnnnn btn-outline-success ml-auto" type="button" id="navbutton">Book Now</button>
+      </nav>
+    
+       <!-------Home img---------->
+       <div class="container-fluid ps-0 pe-0 background-image">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <h1 class="text-center text-white" style="padding-top: 170px; font-size: 55px; font-family: Cormorant Garamond, serif;
+                    font-weight: 700;
+                    font-style: normal;">Gallery</h1>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="display: flex; justify-content: center;">
+                    <p style="color: white !important;"><a href="./index.html" style="text-decoration: none; color: white;">Home</a> <span> > About Us</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-----Gallery------>
+  <div class="container-fluid">
+    <div class="gallery">
+        <ul class="mt-3">
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="Forests" id="Caravan">Forests Room</li>
+            <li class="list" data-filter="Suites">Forests Suites</li>
+            <li class="list" data-filter="Premium ">Premium Forests Suites</li>
+            <li class="list" data-filter="Pool">Pool Forests Suites</li>
+            <li class="list" data-filter="swimming">Swimming </li>
+            <li class="list" data-filter="Dining">Dining</li>
+        </ul>
+        <div class="items-container mt-4">
+
+           <!---------Caravan------->
+            <div class="items Forests">
+                <a href="./images/frs1.jpg">
+                    <img src="./images/frs1.jpg" loading="lazy" alt="carvan.jpg" srcset="" />
+                </a>
+            </div>
+         
+            <div class="items Forests">
+                <a href="./images/frs2.jpg">
+                    <img src="./images/frs2.jpg" loading="lazy" alt="">
+                </a>
+            </div>
+
+            <div class="items Forests">
+                <a href="./images/frs3.jpg">
+                    <img src="./images/frs3.jpg" loading="lazy" alt="carvan.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Forests">
+                <a href="./images/frs4.jpg">
+                    <img src="./images/frs4.jpg" loading="lazy" alt="carvan.jpg" srcset="" />
+                </a>
+            </div>
+
+            
+
+            
+            
+
+ 
+
+            <!---------Pond------->
+
+            <div class="items Suites">
+                <a href="./images/forestsuites1.jpg">
+                    <img src="./images/forestsuites1.jpg" loading="lazy" alt="pond.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Suites">
+                <a href="./images/forestsuites2.jpg">
+                    <img src="./images/forestsuites2.jpg" loading="lazy" alt="pond.jpg" srcset="" />
+                </a>
+            </div>
+
+            
+            <div class="items Suites">
+                <a href="./images/forestsuites3.jpg">
+                    <img src="./images/forestsuites3.jpg" loading="lazy" alt="pond.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Suites">
+                <a href="./images/forestsuites4.jpg">
+                    <img src="./images/forestsuites4.jpg"loading="lazy" alt="pond.jpg" srcset="" />
+                </a>
+            </div>
+
+           
+
+            <!---------Mango------->
+
+            <div class="items Premium">
+                <a href="./images/premium1.jpg">
+                    <img src="./images/premium1.jpg" loading="lazy" alt=" mango.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Premium">
+                <a href="./images/premium2.jpg">
+                    <img src="./images/premium2.jpg" loading="lazy"
+                alt=" mango.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Premium">
+                <a href="./images/premium3.jpg">
+                    <img src="./images/premium3.jpg" loading="lazy" alt=" mango.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Premium">
+                <a href="./images/premium4.jpg">
+                    <img src="./images/premium4.jpg" loading="lazy" alt=" mango.jpg" srcset="" />
+                </a>
+            </div>
+
+           
+
+            <!---------Swimming------->
+
+            <div class="items Pool">
+                <a href="./images/poolforest1.jpg">
+                    <img src="./images/poolforest1.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Pool">
+                <a href="./images/poolforest4.jpg">
+                    <img src="./images/poolforest4.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Pool">
+                <a href="./images/poolforest2.jpg">
+                    <img src="./images/poolforest2.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+            <div class="items Pool">
+                <a href="./images/poolforest3.jpg">
+                    <img src="./images/poolforest3.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Pool">
+                <a href="./images/poolforest5.jpg">
+                    <img src="./images/poolforest5.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Pool">
+                <a href="./images/poolforest6.jpg">
+                    <img src="./images/poolforest6.jpg" loading="lazy" alt="swimming.jpg" srcset="" />
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!---------Restaurant------->
+
+            <div class="items swimming">
+                <a href="./images/poolamain.jpg">
+                    <img src="./images/poolamain.jpg" loading="lazy" alt="restaurant.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items swimming">
+                <a href="./images/poolforest4.jpg">
+                    <img src="./images/poolforest4.jpg" loading="lazy" alt="restaurant.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items swimming">
+                <a href="./images/gm14.jpg">
+                    <img src="./images/gm14.jpg" loading="lazy" alt="restaurant.jpg" srcset="" />
+                </a>
+            </div>
+
+            
+            <div class="items swimming">
+                <a href="./images/ho2.jpg">
+                    <img src="./images/ho2.jpg" loading="lazy" alt="restaurant.jpg" srcset="" />
+                </a>
+            </div>
+
+            <!---------Lounge------->
+
+            <div class="items Dining">
+                <a href="./images/di1.jpg">
+                    <img src="./images/di1.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Dining">
+                <a href="./images/dineit.jpg">
+                    <img src="./images/dineit.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Dining">
+                <a href="./images/dining3.jpg">
+                    <img src="./images/dining3.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Dining">
+                <a href="./images/gm5.jpg">
+                    <img src="./images/gm5.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+            <div class="items Dining">
+                <a href="./images/gm6.jpg">
+                    <img src="./images/gm6.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+            
+            <div class="items Dining">
+                <a href="./images/gm7.jpg">
+                    <img src="./images/gm7.jpg" loading="lazy" alt="launge.jpg" srcset="" />
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+       <!----------Footer----------->
+       <footer class="main-footer" style="background-color: white; height: auto;" >
+        <div class="container">
+          <!--Widgets Section-->
+          <div class="widgets-section">
+            <div class="row clearfix">
+      
+              <!--Column-->
+              <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                <div class="row clearfix">
+      
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                    <div class="footer-widget about-widget">
+                      <div class="logo">
+                        <a href="#"><img src="./images/Home-1/logo.png" alt="" /></a>
+                      </div>
+                      <div class="text">
+                        <p>Silvanus forest retreat resort is located in alibaug. Just minutes away from beautiful beach revdanda
+                          Book your stay with us today and start on a journey of luxury and unparalleled beauty of nature. Your
+                          perfect getaway awaits.</p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                      <h2 class="roomsh32">Rooms</h2>
+                      <ul class="footer-list">
+                        <li><a href="./rooms.html#Forestsroom">Forest Rooms</a></li>
+                        <li><a href="./rooms.html#forestssuite">Forest Suites</a></li>
+                        <li><a href="./rooms.html#premium">Premium Forest Suites</a></li>
+                        <li><a href="./rooms.html#pool">Pool Forest Suites</a></li>
+                      </ul>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+      
+              <!--Column-->
+              <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                <div class="row clearfix">
+      
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                      <h2  class="roomsh32">Quick Links</h2>
+                      <ul class="footer-list">
+                        <li><a href="./practice.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./rooms.html">Rooms</a></li>
+                        <li><a href="./facilities.html">Facilities</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+      
+                      </ul>
+                    </div>
+                  </div>
+      
+                  <!--Footer Column-->
+                  <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget info-widget">
+                      <h2 class="roomsh32">Contact Info</h2>
+                      <ul class="info-list">
+                        <li>S. No. 975, Bhatgalli Chaul, Chaul, Alibag, Maharashtra 402203</li>
+                        <li>9049099157</li>
+                        <li>9145000486</li>
+                        <li>reservations@silvanus.in</li>
+                      </ul>
+                      <!-- Social Links -->
+                      <ul class="social-links">
+                        <li class="google"><a href=" https://www.google.com/search?q=silvanus+alibaug&oq=silvanus+alibaug&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIWCAEQLhivARjHARiABBiYBRiZBRieBTIHCAIQABiABDINCAMQLhivARjHARiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDYxNTlqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8" target="_blank"><span class="fab fa-google-plus-g"></span></a></li>
+                        <li class="facebook"><a href="https://www.facebook.com/profile.php?id=100076378141246" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/silvanusforestretreatalibaug/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row clearfix">
+      
+              <div class="column col-lg-6 col-md-12 col-sm-12">
+                <div class="copyright"><span class="theme_color">revmerito</span> &copy; 2024 All Right Reserved</div>
+              </div>
+              <div class="column col-lg-6 col-md-12 col-sm-12">
+                <ul class="footer-nav">
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      
+      </footer>
+      
+  
+  
+  <!-- Back to Top -->
+  <a href="#" class="backbtn btn-lg btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/9145000486" target="_blank"><i class="fa-brands fa-whatsapp fa-3x" style=" color: #25D366;"></i></a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!---jquery---->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <!-----magnific popup js------->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+        <script src="gallery.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+         
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

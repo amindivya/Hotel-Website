@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!------Aos Animation------>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-------Owl link-------->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+     <!--------google font-------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rancho&display=swap" rel="stylesheet">
+     
+      <!-------bootstrap link-------->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <!------owl link------->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+  ::selection{
+    background-color: #066845;
+  }
+  
+  
+   /*navbar*/
+   .navbar-nav .nav-item .nav-link{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+  }
+   
+  
+  .btnnnnn {
+    
+    background-color: transparent;
+    color: #066845;
+    border: 2px solid #066845;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 110px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  
+  /* Animation styles */
+  .btnnnnn::before,
+  .btnnnnn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    color: white !important;
+    background-color: #066845; /* Green color */
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+  }
+  .btnnnnn:hover{
+    color: white !important;
+  }
+  
+  .btnnnnn::before {
+    left: 0;
+  }
+  
+  .btnnnnn::after {
+    right: 0;
+  }
+  
+  .btnnnnn:hover::before,
+  .btnnnnn:hover::after {
+    width: 50%;
+  
+  }
+  
+  /* Animation keyframes */
+  @keyframes expandFromLeft {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  
+  @keyframes expandFromRight {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  
+  .btnnnnn:hover::before {
+    animation: expandFromLeft 0.3s forwards;
+  
+  }
+  
+  .btnnnnn:hover::after {
+    animation: expandFromRight 0.3s forwards;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-item{
+    padding: 20px;
+  }
+  @media(max-width:992px){
+    .navbar-brand img{
+        margin-left: 90px !important;
+    }
+     .btnnnnn{
+       margin: 20px !important;
+     }
+     
+  
+    
+  }
+  @media(max-width:520px){
+    .navbar-brand img{
+      margin-left: 0px !important;
+    }
+  }
+  @media(max-width:425px){
+       .navbar-brand img{
+        width: 120px !important;
+        height: 60px !important;
+       }
+  }
+  
+  
+    
+  
+  /*Footer*/
+   
+  
+  ul{
+      list-style: none;
+   }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    section {
+      padding: 60px 0;
+      /* min-height: 100vh;*/
+    }
+    .roomsh32{
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .main-footer {
+      position: relative;
+      padding: 110px 0px 0px;
+      background-color: #f4f5f7;
+      background-repeat: repeat-x;
+      background-position: right bottom;
+    }
+    
+    .main-footer .footer-widget {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    .main-footer .widgets-section {
+      position: relative;
+      padding-bottom: 60px;
+    }
+    
+    .main-footer .footer-widget h2 {
+      position: relative;
+      left: 25px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #161c42;
+      line-height: 1.2em;
+      margin-bottom: 30px;
+      margin-top: 25px;
+      text-transform: capitalize;
+    }
+    
+    .main-footer .about-widget {
+      position: relative;
+    }
+    
+    .main-footer .about-widget .logo {
+      position: relative;
+      margin-bottom: 15px;
+      width: 210px;
+    }
+    .main-footer .about-widget .text {
+      position: relative;
+    }
+    
+    .main-footer .about-widget .text p {
+      position: relative;
+      color: #8a8d91;
+      font-size: 16px;
+      line-height: 1.7em;
+      margin-bottom: 20px;
+    }
+    
+    .main-footer .about-widget .text p:last-child {
+      margin-bottom: 0px;
+    }
+    
+    /* Footer List */
+    
+    .main-footer .footer-list {
+      position: relative;
+    }
+    
+    .main-footer .footer-list li {
+      position: relative;
+      margin-bottom: 17px;
+    }
+    
+    .main-footer .footer-list li a {
+      position: relative;
+      color: gray;
+      font-size: 16px;
+      padding-left: 15px;
+      -webkit-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+    
+    .main-footer .footer-list li a:hover {
+      text-decoration: underline;
+      color: #066845;
+    }
+    
+    .main-footer .footer-list li a:before {
+      position: absolute;
+      content: "\f105";
+      left: 0px;
+      top: 0px;
+      color: #8a8d91;
+      font-weight: 800;
+      font-family: "Font Awesome 5 Free";
+    }
+    
+    /*Gallery Widget*/
+    
+    .main-footer .gallery-widget {
+      position: relative;
+      max-width: 350px;
+    }
+    
+    .main-footer .gallery-widget .images-outer {
+      position: relative;
+      margin: 0px -3px;
+    }
+    
+    .main-footer .gallery-widget .image-box {
+      position: relative;
+      float: left;
+      width: 33.333%;
+      padding: 0px 5px;
+      margin-bottom: 10px;
+    }
+    
+    .main-footer .gallery-widget .image-box img {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      -webkit-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+    
+    .main-footer .gallery-widget .image-box img:hover {
+      opacity: 0.7;
+    }
+    
+    /* Info List */
+    
+    .main-footer .info-list {
+      position: relative;
+    }
+    
+    .main-footer .info-list li {
+      position: relative;
+      color: #8a8d91;
+      font-size: 16px;
+      line-height: 1.8em;
+      margin-bottom: 12px;
+    }
+    
+    .main-footer .info-widget .social-links {
+      position: relative;
+      float: left;
+      padding: 15px 0px;
+    }
+    
+    .main-footer .info-widget .social-links li {
+      position: relative;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    
+    .main-footer .info-widget .social-links li:last-child {
+      margin-right: 0px;
+    }
+    
+    .main-footer .info-widget .social-links li a {
+      position: relative;
+      left: 25px;
+      color: #ffffff;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      -webkit-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+    
+    .main-footer .info-widget .social-links li.google a {
+      background-color: #066845;
+    }
+    
+    .main-footer .info-widget .social-links li.facebook a {
+      background-color: #066845;
+    }
+    
+    .main-footer .info-widget .social-links li.twitter a {
+      background-color: #066845;
+    }
+    
+    .main-footer .info-widget .social-links li.instagram a {
+      background-color: #066845;
+    }
+    
+    .main-footer .info-widget .social-links li.vimeo a {
+      background-color: #066845;
+    }
+    
+    .main-footer .footer-bottom {
+      position: relative;
+      padding: 20px 0px;
+      border-top: 1px solid #e5e5e5;
+    }
+    
+    .main-footer .footer-bottom .footer-nav {
+      position: relative;
+      text-align: right;
+    }
+    
+    .main-footer .footer-bottom .footer-nav li {
+      position: relative;
+      padding-right: 10px;
+      margin-right: 10px;
+      line-height: 1.1em;
+      display: inline-block;
+      border-right: 1px solid #8a8d91;
+    }
+    
+    .main-footer .footer-bottom .footer-nav li:last-child {
+      padding-right: 0px;
+      margin-right: 0px;
+      border-right: none;
+    }
+    
+    .main-footer .footer-bottom .footer-nav li a {
+      position: relative;
+      color: #8a8d91;
+      font-size: 15px;
+      -webkit-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+    
+    .main-footer .footer-bottom .footer-nav li a:hover {
+      color: #066845;
+      text-decoration: underline;
+    }
+    .back-to-top {
+      position: fixed;
+      display: none;
+      right: 45px;
+      bottom: 45px;
+      z-index: 99;
+  }
+  
+  
+    /*** Button ***/
+  .backbtn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+    background-color: #066845;
+    color: white;
+  }
+  
+  .btn-square {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .btn-sm-square {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .btn-lg-square {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .btn-square,
+  .btn-sm-square,
+  .btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+  }
+  
+  
+  
+  
+  .box{
+    height: 600px !important;
+    border: 2px solid #f4f4f4;
+    }
+    .box h2{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    .box p{
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+          .background-image{
+          height: 60vh;
+          background-image: url(./images/spa\ 1.jpg);
+          background-size: cover;
+          object-fit: cover;
+          background-position: center;
+          background-blend-mode: darken;
+          background-color: rgba(0, 0, 0, 0.7);
+      }
+      .whatsapp{
+    position: fixed;
+    right: 50px;
+    bottom: 120px;
+  
+  }
+
+
+
+  .spabtnss {
+    
+    background-color: transparent;
+    color: #066845;
+    border: 2px solid #066845;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  
+  /* Animation styles */
+  .spabtnss::before,
+  .spabtnss::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    color: white !important;
+    background-color: #066845; /* Green color */
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+  }
+  .spabtnss:hover{
+    color: white !important;
+  }
+  
+  .spabtnss::before {
+    left: 0;
+  }
+  
+  .spabtnss::after {
+    right: 0;
+  }
+  
+  .spabtnss:hover::before,
+  .spabtnss:hover::after {
+    width: 50%;
+  
+  }
+  
+  /* Animation keyframes */
+  @keyframes expandFromLeft {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  
+  @keyframes expandFromRight {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  
+  .spabtnss:hover::before {
+    animation: expandFromLeft 0.3s forwards;
+  
+  }
+  
+  .spabtnss:hover::after {
+    animation: expandFromRight 0.3s forwards;
+  }
+  
+  
+  
+
+  </style>
+  
+<body>
+     <!-------navbar---------->
+   <nav class="navbar navbar-expand-lg  sticky-top" style="background-color: white !important;">
+    <a class="navbar-brand me-auto" href="#"><img src="./images/Home-1/logo.png" alt="" srcset=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./rooms.html">Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./facilities.html">Facilities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./gallery.html">Gallery</a>
+        </li>
+      
+        
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btnnnnn btn-outline-success ml-auto" type="button">Book Now</button>
+  </nav>
+
+    <!-------Home img---------->
+    <div class="container-fluid ps-0 pe-0 background-image">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  
+                  <h1 class="text-center text-white" style="padding-top: 170px; font-size: 55px; font-family: Cormorant Garamond, serif;
+                  font-weight: 700;
+                  font-style: normal;">Spa</h1>
+                  
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12" style="display: flex; justify-content: center;">
+                  <p style="color: white !important;"><a href="./index.html" style="text-decoration: none; color: white;">Home</a> <span> >Spa</span></p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="container-fluid" id="spa">
+   <center> <h1 class="spah1 mt-4" style="color: #066845; font-family: Cormorant Garamond, serif;
+    font-weight: 700;
+    font-style: normal; font-size: 50px;">Spa Feel Divine</h1></center>
+    <div class="container">
+        <div class="conent pt-4" style="font-family: Cormorant Garamond, serif;font-weight: 700;font-style: normal; font-size: 22px !important;">
+     <p>Elevate your senses and soothe your soul at Silvanus Forests Retreat’ world-class spa. Our expert spa therapists specialize in a variety of massage techniques to improve circulation, hasten detoxification, and release tension. Other services include facials, full-body treatments (including hot stone therapy), and spa manicures and pedicures.</p>
+    <p>In-suite and beachside massage services.
+
+        Spa hours are 9 a.m. to 7 p.m. daily.
+        To make an appointment or inquire about spa services, please contact us or call 9145000486.</p>
+    </div>
+    <div class="row pt-4">
+        <div class="col-lg-6">
+           <img src="./images/spapage.png" alt="" srcset="">
+        </div>
+        <div class="col-lg-6">
+         <img src="./images/spapage1.png" alt="" srcset="">
+        </div>
+    </div>
+    <center><div class="buttonspa pt-5">
+        <button class="spabtnss">Contact Now</button>
+    </div></center>
+    </div>
+  </div>
+
+   <!----------Footer----------->
+   <footer class="main-footer" style="background-color: white; height: auto;" >
+    <div class="container">
+      <!--Widgets Section-->
+      <div class="widgets-section">
+        <div class="row clearfix">
+  
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+  
+              <!--Footer Column-->
+              <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                <div class="footer-widget about-widget">
+                  <div class="logo">
+                    <a href="#"><img src="./images/Home-1/logo.png" alt="" /></a>
+                  </div>
+                  <div class="text">
+                    <p>Silvanus forest retreat resort is located in alibaug. Just minutes away from beautiful beach revdanda
+                      Book your stay with us today and start on a journey of luxury and unparalleled beauty of nature. Your
+                      perfect getaway awaits.</p>
+                  </div>
+                </div>
+              </div>
+  
+              <!--Footer Column-->
+              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                <div class="footer-widget links-widget">
+                  <h2 class="roomsh32">Rooms</h2>
+                  <ul class="footer-list">
+                    <li><a href="./rooms.html#Forestsroom">Forest Rooms</a></li>
+                    <li><a href="./rooms.html#forestssuite">Forest Suites</a></li>
+                    <li><a href="./rooms.html#premium">Premium Forest Suites</a></li>
+                    <li><a href="./rooms.html#pool">Pool Forest Suites</a></li>
+                  </ul>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+  
+              <!--Footer Column-->
+              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                <div class="footer-widget links-widget">
+                  <h2  class="roomsh32">Quick Links</h2>
+                  <ul class="footer-list">
+                    <li><a href="./practice.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./facilities.html">Facilities</a></li>
+                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+  
+                  </ul>
+                </div>
+              </div>
+  
+              <!--Footer Column-->
+              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget info-widget">
+                  <h2 class="roomsh32">Contact Info</h2>
+                  <ul class="info-list">
+                    <li>S. No. 975, Bhatgalli Chaul, Chaul, Alibag, Maharashtra 402203</li>
+                    <li>9049099157</li>
+                    <li>9145000486</li>
+                    <li>reservations@silvanus.in</li>
+                  </ul>
+                  <!-- Social Links -->
+                  <ul class="social-links">
+                    <li class="google"><a href=" https://www.google.com/search?q=silvanus+alibaug&oq=silvanus+alibaug&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIWCAEQLhivARjHARiABBiYBRiZBRieBTIHCAIQABiABDINCAMQLhivARjHARiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDYxNTlqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8" target="_blank"><span class="fab fa-google-plus-g"></span></a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/profile.php?id=100076378141246" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="instagram"><a href="https://www.instagram.com/silvanusforestretreatalibaug/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row clearfix">
+  
+          <div class="column col-lg-6 col-md-12 col-sm-12">
+            <div class="copyright"><span class="theme_color">revmerito</span> &copy; 2024 All Right Reserved</div>
+          </div>
+          <div class="column col-lg-6 col-md-12 col-sm-12">
+            <ul class="footer-nav">
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+
+
+
+  <!-- Back to Top -->
+<a href="#" class="backbtn btn-lg btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+<div class="whatsapp">
+  <a href="https://wa.me/7558266040" target="_blank"><i class="fa-brands fa-whatsapp fa-3x" style=" color: #25D366;"></i></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
